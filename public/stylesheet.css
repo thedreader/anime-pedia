@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.back-vid {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+  }
+  .back-vid video {
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+.container1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 21% 30%;
+    border-radius: 20px;
+    box-shadow: -13px 19px 39px 4px rgba(0,0,0,1);
+    -webkit-box-shadow: -13px 19px 39px 4px rgba(0,0,0,1);
+    -moz-box-shadow: -13px 19px 39px 4px rgba(0,0,0,1);
+    background: rgba(0,0,0,0.75);
+    border-top: 1px solid rgba(255, 255 , 255, 0.5);
+    border-left: 1px solid rgba(255, 255 , 255, 0.5);
+    backdrop-filter: blur(15px);
+    
+}
+
+.container1 nav {
+  position: absolute;
+  top: 10px;
+  left: 37px;
+  font-family: 'Lobster Two', cursive;
+  font-size: 1.4rem;
+  background-image: linear-gradient(50deg, #F8F8F8, #F037A5, #1E3163);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.input-form {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 15px;
+  font-family: 'Nunito', sans-serif;
+}
+.input-form input {
+  padding: 12px 40px;
+  padding-right: 200px;
+  width: 30vw;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+::placeholder {
+  position: relative;
+  top:1px;
+  font-size: 17px;
+  opacity: 0.5;
+}
+
+.input-form button {
+  padding: 11px 15px;
+  z-index: 1;
+  border-radius: 12px;
+  /* margin-right: 10px; */
+  outline: none;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Merienda', cursive;
+  background-color:#FFFF00;
+  border: solid #FFFF00 2px;
+  color: rgb(35, 39, 39);
+  transition: 0.3s ease;
+}
+.input-form button:hover {
+  background-image: none;
+  background-color: transparent;
+  color: azure;
+}
+.input-form .fas {
+  position: absolute;
+  top: 52%;
+  left: 3%;
+  transform: translate(-50%,-50%);
+  color: grey;
+}
+
+.title {
+  position: relative;
+  bottom: 160px;
+  width: 30.5rem;
+  transform: translate(-48%,-50%);
+  left: 45%;
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.3rem;
+  letter-spacing: 2px;
+  background-image: linear-gradient(50deg, #ffffff, #454652);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.title2 {
+  position: absolute;
+  top: 55%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 1px;
+  color: rgb(233, 233, 233);
+  font-family: 'Roboto Slab', serif;
+}
+
+/* type writter effect */
+
+#typewriter{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #FFFF00; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #FFFF00; }
+}
+
+
+#slider{
+  position: absolute;
+  width: 70%;
+  top: 78%;
+  left: 49%;
+  transform: translate(-49%, -50%);
+}
+
+/* .swiper {
+  position: absolute;
+  top: 100px;
+  width: 100px;
+  height: 100px;
+  margin-top: 40px;
+} */
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 5px solid rgb(238, 238, 238);
+  transition: 0.2s all ease-in;
+}
+
+.swiper-slide img:hover {
+  border-color: rgb(95, 209, 95) ;
+  opacity: 0.5;
+}
+
+.swiper-slide p {
+  position: absolute;
+  left: calc(100% - 150px);
+  transform: translateX(-50%);
+  width: 15%;
+  color: #dbdbdb;
+  visibility: hidden;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  padding: 8px 5px;
+  border-radius: 10px;
+  font-size: 14px;
+  bottom: 80px;
+  transition: 0.2s all ease-in;
+}
+
+.swiper-slide .fas {
+  color: rgb(95, 209, 95);
+  position: absolute;
+  top: -15px;
+  left: 15px;
+}
+
+.swiper-slide img:hover + p{
+  visibility: visible;
+  transform: scale(1.1);
+}
+
+/* .top-10{
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 40px;
+  display:flex;
+  flex-direction: row;
+}
+
+.top-contain {
+  position: relative;
+}
+
+.top-10 img {
+  border-radius: 15px;
+  height: 230px;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 5px solid rgb(238, 238, 238);
+  transition: 0.2s all ease-in;
+}
+
+.top-10 p {
+  position: absolute;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 15%;
+  color: #dbdbdb;
+  visibility: hidden;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  padding: 8px 5px;
+  border-radius: 10px;
+  font-size: 14px;
+  bottom: 80px;
+  transition: 0.2s all ease-in;
+}
+
+.top-contain .fas {
+  color: rgb(95, 209, 95);
+  position: absolute;
+  top: -15px;
+  left: 15px;
+}
+
+.top-10 img:hover {
+  border-color: rgb(95, 209, 95) ;
+  opacity: 0.5;
+}
+
+.top-10 img:hover + p{
+  visibility: visible;
+  transform: scale(1.1);
+} */
+
+footer p {
+  position: absolute;
+  z-index: 99;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  top: 96%;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+footer p .fa-heart{
+  animation: ani 1.5s ease-in-out forwards;
+  animation-iteration-count: infinite;
+}
+
+footer p .fa-github {
+  font-size: 16px;
+  transition: all 0.5s ease; 
+  animation: ani 1.5s ease-in-out forwards;
+  animation-iteration-count: infinite; 
+}
+
+

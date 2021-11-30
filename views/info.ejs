@@ -1,0 +1,26 @@
+<%- include("common/header") -%>
+
+<link rel="stylesheet" href="styleInfo.css">
+
+<body>
+   <div class="container">
+      <%- include("common/navBar") -%>
+   </div>
+
+   <div class="container1">
+      <div class="image">
+         <img src="<%=imgUrl %>" alt="Anime Picture">
+      </div>
+      <div class="info">
+         <h1><%=title %></h1>
+         <h2>Synopsis: <%=synopsis %></h2>
+         <h2>Airing: <%=airing %></h2>
+         <h2>Type: <%=type %></h2>
+         <h2>Episodes: <%=episodes %></h2>
+         <h2>Score: <%=score %></h2>
+      </div>
+   </div>
+
+   <%- include("common/footer") -%> 
+</body>
+</html>

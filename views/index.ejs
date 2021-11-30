@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">  
+
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400&family=Merienda&family=Merienda+One&family=Montserrat+Alternates:wght@400;500;600&family=Open+Sans:wght@400;600&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <title>AnimePedia</title>
+</head>
+<body onload="myFunc()">
+    <div class="pre-loader" id="abc">
+        <!-- Loader -->
+        <div class="blobs">
+          <div class="blob-center"></div>
+          <div class="blob"></div>
+          <div class="blob"></div>
+          <div class="blob"></div>
+          <div class="blob"></div>
+          <div class="blob"></div>
+          <div class="blob"></div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+              <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+          </defs>
+        </svg>
+    </div>
+    
+    <div class="back-vid">
+        <video autoplay muted loop>
+            <source src="assets/back-vid.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="container1">
+        <nav>
+            <h3>AnimePedia</h3>
+        </nav>
+        <h2 class="title" id="typewriter">Welcome to AnimePedia</h2>
+        <div class="input-form">
+            <form action="/" method="post">
+                <i class="fas fa-search"></i>
+                <input type="search" name="search" id="searchAnime" placeholder="Search Anime">
+                <button type="submit" onClick="check()">LOOK UP</button>
+            </form>
+            <a href="/schedule"><button >SCHEDULE</button></a>
+        </div>
+        <h2 class="title2">Top Animes</h2>
+        <div class="swiper mySwiper" id="slider">
+            <div class="swiper-wrapper">
+              <% for(let i = 0; i < pic.length; i++ ){ %>
+                <div class="swiper-slide">
+                    <a href="/<%=title[i]%> ">
+                        <img src="<%=pic[i]%> " alt="">
+                        <p id="score"><i class="fas fa-star"></i><%=score[i]%>/10</p>
+                    </a>
+                </div>
+              <% } %>   
+            </div>
+            <div class="swiper-button-next" style="color: #FFFF00; opacity: 0.7;"></div>
+            <div class="swiper-button-prev" style="color: #FFFF00; opacity: 0.7;"></div>
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+        
+    </div>
+
+    <footer>
+        <p>Made with <i class="fas fa-heart"></i> By Chirantan Paul <a href="https://github.com/thedreader/anime-pedia"><i class="fab fa-github"></i></a></p>
+    </footer>
+
+    <!-- pre loader -->
+    <script>
+        var pre= document.getElementById('abc');
+    
+        function myFunc() {
+          pre.style.display= 'none';
+        }
+    </script>
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 5,
+        slidesPerGroup: 4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        // autoplay: {
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // },
+        // pagination: {
+        //   el: ".swiper-pagination",
+        //   clickable: true,
+        // },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <!-- alert -->
+    <script>
+        function check() {
+            const a= document.getElementById("searchAnime");
+
+            if(a.value == "")
+            {
+                alert("Please enter an anime name!");
+            }
+        }
+    </script>
+    
+</body>
+</html>

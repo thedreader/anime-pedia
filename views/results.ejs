@@ -1,0 +1,32 @@
+<%- include("common/header") -%>
+
+<link rel="stylesheet" href="styleRes.css">
+
+<body>
+    <div class="container">
+
+        <%- include("common/navBar") -%>
+
+        <div class="results">
+            
+            <% for( var i = 0; i < url.length; i++ ) { %>
+            <div class="info">
+                <a href="/<%=name[i] %> "><img src="<%=url[i] %> " alt=""></a>
+                <% if(name[i].length > 49) {%> 
+                    <h2><%=name[i].substring(0, 50)%>...</h2>
+                <% } %> 
+
+                <%if(name[i].length <= 49) {%>
+                    <h2><%=name[i]%></h2>
+                <% } %> 
+
+            </div>
+            <% } %>
+        </div>
+        
+    </div>
+    
+    <%- include("common/footer") -%>  
+
+</body>
+</html>

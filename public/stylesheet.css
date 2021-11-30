@@ -323,4 +323,29 @@ footer p .fa-github {
   animation-iteration-count: infinite; 
 }
 
+@keyframes ani {
+  0% {
+    color: #FFE652;
+  }
+  17% {
+    color: #C2FFF9;
+  }
+  34% {
+    color: #71DFE7;
+  }
+  51% {
+    color: #009DAE;
+  }
+  68% {
+    color: #71DFE7;
+  }
+  85% {
+    color: #C2FFF9;
+  }
+  100% {
+    color: #FFE652;
+  }
+}
+
+
 

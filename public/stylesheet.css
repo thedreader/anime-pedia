@@ -25,12 +25,13 @@
   }
 
 .container1 {
+    width: 91vw;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    padding: 21% 30%;
+    padding: 22% 30%;
     border-radius: 20px;
     box-shadow: -13px 19px 39px 4px rgba(0,0,0,1);
     -webkit-box-shadow: -13px 19px 39px 4px rgba(0,0,0,1);
@@ -88,7 +89,6 @@
   padding: 11px 15px;
   z-index: 1;
   border-radius: 12px;
-  /* margin-right: 10px; */
   outline: none;
   font-size: 13px;
   font-weight: 700;
@@ -111,12 +111,13 @@
   color: grey;
 }
 
-.title {
-  position: relative;
+/* .title {
+  position: absolute;
+  z-index: 3;
   bottom: 160px;
   width: 30.5rem;
-  transform: translate(-48%,-50%);
   left: 45%;
+  transform: translate(-48%,-50%);
   font-family: 'Roboto Slab', serif;
   font-size: 2.3rem;
   letter-spacing: 2px;
@@ -126,6 +127,61 @@
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
+} */
+
+.title {
+  position: absolute;
+  z-index: 3;
+  top: 22%;
+  left: 48%;
+  transform: translate(-50%,-50%);
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.3rem;
+  letter-spacing: 2px;
+  background-image: linear-gradient(50deg, #ffffff, #454652);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+/* type writter effect */
+
+.container1 .title {
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30rem;
+  opacity: 0;
+  -webkit-animation: type3 3s steps(20, end), blink .5s step-end infinite alternate;
+  animation: type3 3s steps(20, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
 }
 
 .title2 {
@@ -242,62 +298,6 @@
   transform: scale(1.1);
 }
 
-/* .top-10{
-  position: absolute;
-  top: 57%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 40px;
-  display:flex;
-  flex-direction: row;
-}
-
-.top-contain {
-  position: relative;
-}
-
-.top-10 img {
-  border-radius: 15px;
-  height: 230px;
-  object-fit: cover;
-  margin-right: 15px;
-  border: 5px solid rgb(238, 238, 238);
-  transition: 0.2s all ease-in;
-}
-
-.top-10 p {
-  position: absolute;
-  left: 30%;
-  transform: translateX(-50%);
-  width: 15%;
-  color: #dbdbdb;
-  visibility: hidden;
-  font-family: 'Nunito', sans-serif;
-  font-weight: bold;
-  padding: 8px 5px;
-  border-radius: 10px;
-  font-size: 14px;
-  bottom: 80px;
-  transition: 0.2s all ease-in;
-}
-
-.top-contain .fas {
-  color: rgb(95, 209, 95);
-  position: absolute;
-  top: -15px;
-  left: 15px;
-}
-
-.top-10 img:hover {
-  border-color: rgb(95, 209, 95) ;
-  opacity: 0.5;
-}
-
-.top-10 img:hover + p{
-  visibility: visible;
-  transform: scale(1.1);
-} */
-
 footer p {
   position: absolute;
   z-index: 99;
@@ -347,5 +347,104 @@ footer p .fa-github {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  body{
+    background: url("assets/back-img-phn.webp") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .back-vid {
+    display: none;
+  }
+  .container1 {
+    top: 45%;
+    padding: 21% 30%;
+    height: 45vh;
+  }
+  
+  .title {
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  
+  /* type writter effect */
+  
+  .container1 .title {
+    width: 22.5rem;
+  }
+
+  .title2 {
+    top: 60%;
+    left: 50%;
+  }
+
+  #slider{
+    height: 85%;
+    width: 80%;
+    top: 100%;
+    left: 49%;
+    transform: translate(-49%, -50%);
+  }
+  .swiper-pagination-bullet {
+    opacity: 0.5 !important;
+    background-color: white !important;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1 !important; 
+    background-color: #FFFF00 !important;
+  }
+
+  .swiper-slide p {
+    left: calc(100% - 100px);
+  }
+
+  .input-form {
+    top: 35%;
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .input-form form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .input-form input {
+    padding: 5px 50px;
+    padding-left: 30px;
+    width: 50vw;
+    height: 5vh;
+    margin-right: 5px;
+    font-size: 16px;
+  }
+  .input-form button {
+    padding: 5px 10px;
+    width: max-content;
+  }
+  .input-form .fas {
+    top: 25%;
+    left: 5%;
+  }
+
+  .input-form a{
+    width: max-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .input-form .schedule-btn {
+    padding: 6px 10px;
+  }
+
+  footer p{ 
+    width: max-content;
+  }
+}
 
 
